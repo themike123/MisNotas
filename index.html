@@ -16,7 +16,7 @@
 
       <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 			<script type="text/javascript" src="js/materialize.min.js"></script>
-			<script type="text/javascript" src="js/plugins.min.js"></script>
+
 			<script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
 
 
@@ -24,6 +24,7 @@
 			<link rel='stylesheet' href='css/materialize.min.css'/>
 			<link rel='stylesheet' href='css/perfect-scrollbar.css'/>
 			<link rel='stylesheet' href='css/style.min.css'/>
+
       <script>
       $( document ).ready(function(){
           $(".button-collapse").sideNav();
@@ -35,8 +36,10 @@
     <body onload="cargar()">
       <!--Esta Seccion en de nav-->
       <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" >
         <a href="#" class="brand-logo">Mis Notas</a>
+
+        <!-- width height-->
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <!--<li><a href="sass.html"></a></li>
           <li><a href="badges.html"></a></li>
@@ -46,15 +49,28 @@
     </nav>
         <!--                           end                             -->
       <div  ng-controller='subirController'>
-        <div class="container">
-        </br>
-          <a href="nuevo.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+
+      </br>
+      <center>
+          <a  style="width:80px; height:80px;" href="nuevo.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </center>
         </br>
           <div class="row" id="contenedora">
 
 
+
           </div>
-        </div>
+          <div class="row">
+          <div class="col s12 m6">
+            <div class="card-panel teal" style="height:300px;">
+              <span class="white-text" >
+              <font  size="6"><p><b>Ir a ver a nati</b></p>
+              <font  size="6">Esta es una prueba de lo que tengo que hacer en el cuadro de texto aver si puedo
+              <font  size="3"><p>20/01/2016</p>
+              </span>
+            </div>
+          </div>
+          </div>
 
       </div>
     </body>
