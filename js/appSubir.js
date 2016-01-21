@@ -7,13 +7,17 @@
       var ContenedorListas=localStorage.getItem("listas");
 
       if (ContenedorListas) {
+        var fecha = new Date();
+        var fecaactual=fecha.getDate() + "/" + (fecha.getMonth() +1) + "/" + fecha.getFullYear();
+
         var aux=JSON.parse(ContenedorListas);
         document.getElementById("contenedora").innerHTML = '';
         for (var i = 0; i < aux.notas.length; i++) {
           var cadena= "<div class=\"col s12 m6\">"+
                       "<div class=\"card-panel teal\">"+
                       "<span class=\"white-text\" >"+
-                      "<font  size=\"6\">"+aux.notas[i].contenido+i+
+                      "<font  size=\"6\">"+aux.notas[i].contenido+
+                      "<font  size=\"3\"><p>"+fecaactual+"<\p>"+
                       "</span>"+
                       "</div>"+
                       "</div>";
@@ -21,7 +25,12 @@
           document.getElementById("contenedora").innerHTML += cadena;
         }
       }
+
+
+
+      console.log("Esta es la fecha:"+fecaactual);
     }
+
   //$scope.nuevo = function(){
   function nuevo() {
     var ContenedorListas=localStorage.getItem("listas");
